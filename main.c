@@ -30,8 +30,12 @@ if (enteredPin != pin)
   exit(0);
   }
 }
-while(continueTransaction != 0){
-  printf("\n ")
-}
+
+  printf("\n\t\t\t=============Transaction Availiable=========== ");
+  printf("\n\t\t\t1 Withdrawals ");
+  printf("\n\t\t\t2 Deposit");
+  printf("\n\t\t4 Transfers");
+  printf("\n\t\t\t4 Availiable Balance");
+
 
 }
