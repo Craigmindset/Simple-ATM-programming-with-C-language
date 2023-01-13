@@ -30,12 +30,12 @@ if (enteredPin != pin)
   exit(0);
   }
 }
-
-  printf("\n\t\t\t=============Transaction Availiable=========== ");
+while(continueTransaction != 0){
+ printf("\n\t\t\t=============Transaction Availiable=========== ");
   printf("\n\t\t\t1 Withdrawals ");
   printf("\n\t\t\t2 Deposit");
-  printf("\n\t\t\t3 Transfers");
-  printf("\n\t\t\t4 Availiable Balance");
+  printf("\n\t\t\t3 Availiable Balance");
+  printf("\n\t\t\t4 Transfer Fund");
   printf("\n\n\t Please select the options: ");
   scanf("%d", &option);
   switch(option){
@@ -53,11 +53,35 @@ if (enteredPin != pin)
     }
     else {
       balance -= amount;
-      printf("\n\t\t you have withdrawn .%d. Naira \n,your new balance is %.2f", amount, balance);
-      amount=1;
-      break;
+      printf("\n\t\t you have withdrawn .%d. Naira : Your new balance is %.2f", amount, balance);
+      amount = 1;
+      break; 
     }
+    case 2:
+    printf("\n\t\t Please enter the amount ");
+    scanf("%d", &amount);
+    balance += amount;
+    
+    printf("\n\t\t You have deposited .%d. Naira : Your new balance is %.2f", amount,balance);
+    printf("\n\t\t\t ==============Thank you for banking with us ==========");
+    amount = 1;
+    break;  
+
+    case 3:
+    printf("\n\t\t your balance is Naira .%.2f",balance);
+    break;
+
+    default:
+    Beep(610,500);  
+    printf("\n\t\t Invalid Option!!!");
   }
+  
+  printf("\n\t\t Do you wish to continue with this transaction? Press 1[Yes], 0[No] ");
+  scanf("%d",&continueTransaction);
 
+}
 
+ 
+
+return 0;
 }
